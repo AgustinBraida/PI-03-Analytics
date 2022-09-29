@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 
+
 historical_BTC = requests.get('https://ftx.com/api/markets/BTC-PERP/candles?resolution=86400').json()
 historical_BTC = pd.DataFrame(historical_BTC['result'])
 historical_BTC['Nombre'] = 'BTC-PERP'
